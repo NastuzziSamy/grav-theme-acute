@@ -1,7 +1,5 @@
 {% do assets.add('jquery', 101) %}
-{% do assets.addJs('theme://js/jquery.fitvids.js') %}
-{% do assets.addJs('theme://js/index.js') %}
-{% do assets.addJs('theme://js/readingTime.min.js') %}
+{% do assets.addJs('theme://assets/js/jquery.fitvids.js') %}
 
 {{ assets.js() }}
 
@@ -24,6 +22,16 @@
 
     var height = $('.article-image').height();
     $('.post-content').css('padding-top', height + 'px');
+
+    $(".post-content").fitVids();
+
+    // Creates Captions from Alt tags
+    $(".post-content img").each(function() {
+        // Let's put a caption if there is one
+        if($(this).attr("alt"))
+          $(this).wrap('<figure class="image"></figure>')
+          .after('<figcaption>'+$(this).attr("alt")+'</figcaption>');
+    });
 
     $('a[href*=\\#]:not([href=\\#])').click(function() {
       if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
