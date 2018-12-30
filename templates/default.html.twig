@@ -39,18 +39,18 @@
 
     <main class="content" role="main">
 
-        {% set featured = taxonomy.findTaxonomy({'tag':'featured'}) %}
+        {% set pinned = taxonomy.findTaxonomy({'tag':'pinned'}) %}
 
-        {% if featured and featured|length > 0 and uri.currentPage == 1 %}
-        <h5 class="index-headline featured"><span>Featured</span></h5>
+        {% if pinned and pinned|length > 0 and uri.currentPage == 1 %}
+        <h5 class="index-headline pinned"><a href="{{ base_url }}/tag{{ config.system.param_sep }}pinned">Pinned</a></h5>
 
-        <div class="container featured">
-            {% for post in featured %}
+        <div class="container pinned">
+            {% for post in pinned %}
                 {% include 'partials/article.html.twig' %}
             {% endfor %}
         </div>
 
-        <h5 class="index-headline normal"><span>Regular</span></h5>
+        <h5 class="index-headline normal"><span>Latest</span></h5>
         {% endif %}
 
         <div class="cf frame">

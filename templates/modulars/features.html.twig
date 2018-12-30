@@ -1,0 +1,9 @@
+{% if features|length > 0 %}
+<div class="post-features">
+    {% for feature in features %}
+        <a class="post-feature post-feature-{{feature}}" href="{{ base_url }}/feature{{ config.system.param_sep }}{{ feature }}">
+            {{ feature }}
+        </a>
+    {% endfor %}
+</div>
+{% endif %}

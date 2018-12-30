@@ -1,0 +1,11 @@
+{% if tags|length > 0 %}
+<div class="post-tags">
+    {% for tag in tags %}
+        <span class="post-tag post-tag-{{tag}}">
+            <a href="{{ base_url }}/tag{{ config.system.param_sep }}{{ tag }}">
+                {{ tag }}
+            </a>
+        </span>
+    {% endfor %}
+</div>
+{% endif %}
