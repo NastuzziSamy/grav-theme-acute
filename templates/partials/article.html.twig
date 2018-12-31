@@ -11,12 +11,12 @@
                     {% endif %}
                 </header>
                 <section class="post-description" itemprop="description">
-                    <p>{{ post.content | striptags | truncate(200) }}</p>
+                    <a href="{{ post.url }}"><p>{{ post.content | striptags | truncate(200) }}</p></a>
                 </section>
             </div>
             {% if post.header.image %}
             <div class="post-right">
-                <a href="{{ post.media[post.header.image].url }}" style="background-image: url('{{ post.media[post.header.image].url }}')"></a>
+                <a href="{{ post.url }}" style="background-image: url('{{ post.media[post.header.image].url }}')"></a>
             </div>
             {% endif %}
         </div>

@@ -193,6 +193,16 @@ button:hover {
         .content article .post-meta a:hover {
           text-decoration: underline; }
 
+.content article .post-description > a {
+  color: black;
+  text-decoration: none;
+}
+
+.content article .post-description > a:hover {
+  color: black;
+  text-decoration: none;
+}
+
 .container.pinned {
   padding-bottom: 40px; }
 
@@ -266,10 +276,6 @@ button:hover {
 .post-data > .post-left {
   flex: 1 1 auto;
   padding-right: 15px;
-}
-
-.post-data > .post-left > .post-description {
-  text-align: justify;
 }
 
 .post-data > .post-right {
@@ -649,6 +655,14 @@ button:hover {
   margin-top: 50px;
 }
 
+.post .noarticleimage .post-meta {
+  padding: 0;
+}
+
+.post .noarticleimage .post-meta .topofpage {
+  visibility: hidden;
+}
+
 .post-tag a {
   font-size: 12px;
   padding: 3px 5px;
@@ -731,12 +745,16 @@ form[name='comments'] div.form-textarea-wrapper {
   display: flex;
 }
 
+form[name='comments'] > div input {
+  width: 90%;
+}
+
 form[name='comments'] > div:nth-child(3) {
   width: 100%;
 }
 
 form[name='comments'] > div:nth-child(3) textarea {
-  width: 100%;
+  width: 95%;
   height: 50px;
 }
 
