@@ -10,6 +10,7 @@
         </header>
         <div class="post-meta">
             <time datetime="{{ post.date | date(site.date_long) }}">{{ post.date | date(site.date_long) }}</time>
+            • {{ post.content|readingtime }} read
         </div>
         <section class="post-excerpt" itemprop="description">
             <p>{{ post.content | striptags | truncate(200) }}</p>

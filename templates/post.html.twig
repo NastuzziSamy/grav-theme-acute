@@ -25,7 +25,7 @@
         <section class="post-content">
           {% if page.template == 'post' %}
           <div class="post-reading">
-            <span class="post-reading-time">{{ page.header.reading_time }}</span>
+            <span class="post-reading-time">{{ page.content|readingtime }}</span> read
           </div>
           {% endif %}
           <a name="topofpage"></a>
