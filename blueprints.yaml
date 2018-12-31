@@ -1,5 +1,5 @@
 name: Acute
-version: 1.4.0
+version: 1.5.0
 description: "Acute theme by Samy NASTUZZI based on Mediator theme of Dirk Fabisch"
 icon: bullseye
 author:
@@ -14,3 +14,6 @@ license: MIT
 
 form:
   validation: loose
+
+dependencies:
+    - { name: readingtime }
