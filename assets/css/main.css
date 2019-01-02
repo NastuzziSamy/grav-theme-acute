@@ -758,4 +758,10 @@ form[name='comments'] > div:nth-child(3) textarea {
   height: 50px;
 }
 
+@media only screen and (max-width: 450px) {
+  .post-data > .post-right {
+    display: none;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */

@@ -6,7 +6,7 @@
     <div class="page-content">
       <div class="wrapper">
         <div class="teaserimage">
-            <div class="teaserimage-image" {% if page.header.cover %}style="background-image: url({{ page.media[page.header.cover].url }})"{% endif %}>
+            <div class="teaserimage-image" style="background-image: url({{ page.media[page.header.cover].url }})">
                 Teaser Image
             </div>
         </div>
@@ -15,7 +15,7 @@
 
     <header class="blog-header">
         {% if site.logo %}
-          <a class="blog-logo" href="{{ base_url_relative}}" style="background-image: url({{ base_url_relative }}{{ site.logo }})">{{ site.title }}</a>
+          <a class="blog-logo" href="{{ base_url_relative }}" style="background-image: url({{ site.logo }})">{{ site.title }}</a>
         {% endif %}
         <h1 class="blog-title">{{ site.title }}</h1>
         <h2 class="blog-description">{{ site.description }}</h2>
