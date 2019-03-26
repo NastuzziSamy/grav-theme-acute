@@ -1,14 +1,15 @@
+<a class="icon-link" href="{{ page.url }}" onClick="shareLink('{{ page.url }}'); return false;">
+  <i class="fa fa-link"></i><span class="hidden"></span>
+</a>
 {% for social in socials %}
   {% if social.url %}
+    &nbsp;&nbsp;·&nbsp;&nbsp;
     <a href="{{ social.url }}">
       {% if social.text %}
-        {{ social.text }}
+        {{ social.text|t }}
       {% else %}
         <i class="fa fa-{{ social.icon }}"></i>
       {% endif %}
     </a>
-    {% if not loop.last %}
-    &nbsp;&nbsp;·&nbsp;&nbsp;
-    {% endif %}
   {% endif %}
 {% endfor %}

@@ -1,0 +1,3 @@
+{% if tags|length > 0 %}
+<span class="post-tags-set">in {% for tag in post.taxonomy.tag %}<span class="post-tag-{{tag}}"><a href="{{ base_url }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag|t }}</a></span>{%if not loop.last %} + {% endif %}{% endfor %}</span>
+{% endif %}

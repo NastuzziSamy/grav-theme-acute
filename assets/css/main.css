@@ -292,6 +292,10 @@ button:hover {
   border-radius: 2px;
 }
 
+.post-tag a:hover {
+    color: rgba(0, 0, 0, 0.74) !important;
+}
+
 .post .article-image {
   position: absolute;
   background-color: black;
@@ -361,7 +365,7 @@ button:hover {
     .post .article-image .post-meta-text a {
       color: rgba(255, 255, 255, 0.75); }
       .post .article-image .post-meta-text a:hover {
-        color: white; }
+        color: white !important; }
   .post .article-image .fa-angle-down {
     font-size: 64px;
     margin: 64px auto 0;
@@ -577,8 +581,9 @@ button:hover {
         color: #333333; }
 
 .share {
+  display: flex;
   text-align: right;
-  padding: 20px 0 0; }
+  padding: 10px 0 0; }
   .share a {
     text-decoration: none;
     color: #bbbbbb;
@@ -672,7 +677,7 @@ button:hover {
   border: none;
   margin-right: 4px;
   margin-bottom: 4px;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .post-features {
@@ -729,7 +734,6 @@ form[name='comments'] {
   display: flex;
   flex-wrap: wrap;
   padding-bottom: 20px;
-  border-bottom: 1px SOLID #DEDEDC;
 }
 
 form[name='comments'] > div {
@@ -756,6 +760,32 @@ form[name='comments'] > div:nth-child(3) {
 form[name='comments'] > div:nth-child(3) textarea {
   width: 95%;
   height: 50px;
+}
+
+.langswitcher {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.langswitcher li {
+    list-style: none;
+    padding: 0 10px;
+}
+
+.post-footer {
+    display: flex;
+    border-bottom: 1px SOLID #DEDEDC;
+    margin-bottom: 45px;
+}
+
+.post-footer .site-footer {
+    padding: 0;
+}
+
+.post-footer .site-footer .langswitcher {
+    justify-content: left;
+    margin-left: -10px;
 }
 
 @media only screen and (max-width: 450px) {

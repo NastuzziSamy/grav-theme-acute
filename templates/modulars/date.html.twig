@@ -1,0 +1,5 @@
+<time datetime="{{ date }}">
+  {% for part in date|date(format)|split(' ') %}
+    {{ part|t }}
+  {% endfor %}
+</time>
